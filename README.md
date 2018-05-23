@@ -10,7 +10,7 @@
 
 
 **************************
-> 开发环境打包 npm run dev
-> 开发环境运行 npm run start
-> 生产环境打包 npm run build
+> 开发环境打包 npm run dev     
+> 开发环境运行 npm run start     
+> 生产环境打包 npm run build     
 
