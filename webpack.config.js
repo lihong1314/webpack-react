@@ -10,14 +10,20 @@ module.exports={
 	entry:['react-hot-loader/patch',path.resolve(__dirname,'app/root.js')],
 	output:{
 		path:path.resolve('dist'),
-		filename:'[name].js'
+        filename:'[name].js',
+        publicPath:'http://localhost:8080/'
 	},
 	module:{
 		loaders:[   
            {
-           	 test:/(\.js|\.jsx)$/,
-           	 exclude:/node_modules/,
-           	 loader:['babel-loader']
+            test:/(\.js|\.jsx)$/,
+            exclude:/node_modules/,
+            use:[{
+                loader:'babel-loader',
+                options:{
+                    plugins:['react-hot-loader/babel']
+                }
+            }]
            },
            {
            	test:/\.css$/,
@@ -63,12 +69,18 @@ module.exports={
         new OpenBrowserPlugin({ url: 'http://localhost:8080' })
     ],
     devServer:{
-        inline:true,
+        publicPath:'/',
+        contentBase:'./',
+        port:8080,
         open:true,
-        hot:true
+        hot:true,
+        inline:true
     },
     resolve: {
         //自动扩展文件后缀名
         extensions: ['.js', '.json', '.less','.scss','.jsx']
+    },
+    watchOptions:{
+        ignored:/node_modules/
     }
 }

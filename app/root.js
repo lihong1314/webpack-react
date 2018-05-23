@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import First from './components/first.js'
 import Second from './components/second.js'
-// import {AppContainer} from 'react-hot-loader';
+import { hot,AppContainer } from 'react-hot-loader';
 //                                                                                                                         /*初始化*/
 // renderWithHotReload(getRouter());
 
@@ -22,22 +22,28 @@ import Second from './components/second.js'
 //         document.getElementById('root')
 //     )
 // }                                                                                                                                                                                               
+const render = (Component)=>{
+  ReactDOM.render((	 
+      /* <Router>
+            <Switch>
+      <Route path="/" component={First}></Route>
+          <Route path="/second" component={Second}></Route>
+            </Switch>
+      </Router>*/
+      <Second/>
 
-ReactDOM.render((	 
-       /* <Router>
-             <Switch>
- 			 <Route path="/" component={First}></Route>
-         	 <Route path="/second" component={Second}></Route>
-             </Switch>
-        </Router>*/
-       <Second/>
+      ),
 
-       ),
+  document.getElementById('root')
+  );
+}
+render(Second)
 
-	document.getElementById('root')
-);
 
 if (module.hot) {  
-  module.hot.accept()  
+  module.hot.accept('./components/second.js',()=>{
+    alert(123)
+    render(Second)
+  })  
 } 
                                                                                     

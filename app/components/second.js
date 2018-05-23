@@ -5,12 +5,12 @@ import List from './imgList/imgList'
 
 //var arrBar=['全部','辣口味','不辣口味']
 
-let arr1=[{src:'app/components/imgList/image/banner.jpg',name:'番茄拌面酱',price:'￥29.8'},
-    {src:'app/components/imgList/image/banner.jpg',name:'番茄拌面酱1',price:'￥29.8'},
+let arr1=[{src:'app/components/imgList/image/banner.jpg',name:'番茄拌面酱0111',price:'￥29.8'},
+    {src:'app/components/imgList/image/banner.jpg',name:'番茄拌面酱111111',price:'￥29.8'},
     {src:'app/components/imgList/image/banner.jpg',name:'番茄拌面酱2',price:'￥29.8'},
     {src:'app/components/imgList/image/banner.jpg',name:'番茄拌面酱3',price:'￥29.8'},
     {src:'app/components/imgList/image/banner.jpg',name:'番茄拌面酱4',price:'￥29.8'},
-    {src:'app/components/imgList/image/banner.jpg',name:'番茄拌面酱',price:'￥29.8'},
+    {src:'app/components/imgList/image/banner.jpg',name:'番茄拌面酱5',price:'￥29.8'},
     {src:'app/components/imgList/image/banner.jpg',name:'番茄拌面酱',price:'￥29.8'},
     {src:'app/components/imgList/image/banner.jpg',name:'番茄拌面酱',price:'￥29.8'}
     ];
